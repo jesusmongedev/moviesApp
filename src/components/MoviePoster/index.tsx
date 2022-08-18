@@ -3,15 +3,17 @@ import React from 'react'
 import { Movie } from '../../types/movieDB.type';
 
 interface Props {
-    movie: Movie
+    movie: Movie,
+    height?: number,
+    width?: number
 }
 
-export const MoviePoster = ({ movie }: Props) => {
+export const MoviePoster = ({ movie, width= 300, height=420 }: Props) => {
     
   const uri = `https://image.tmdb.org/t/p/w500/${movie?.poster_path}`  
 
   return (
-    <View style={ styles.imageContainer }>
+    <View style={{ ...styles.imageContainer, width, height, marginHorizontal: 8 }}>
       <Image
         source={{ uri }}
         style={ styles.image }
@@ -22,8 +24,6 @@ export const MoviePoster = ({ movie }: Props) => {
 
 const styles = StyleSheet.create({
     imageContainer: {
-        width: 300,
-        height: 420,
         shadowColor: "#000",
         shadowOffset: {
             width: 0,
@@ -32,11 +32,11 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.25,
         shadowRadius: 8,
 
-        elevation: 12,
-        borderRadius: 20,
+        elevation: 8,
+        borderRadius: 10,
     },
     image: {
         flex: 1,
-        borderRadius: 20,
+        borderRadius: 18,
     }
 });
