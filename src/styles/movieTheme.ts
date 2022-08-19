@@ -1,8 +1,9 @@
 import { StyleSheet } from "react-native";
+import { colors } from "../constants/colors";
 
 export const styles = StyleSheet.create({
     imageContainer: {
-        shadowColor: "#000",
+        shadowColor: colors.black,
         shadowOffset: {
             width: 0,
             height: 8,
@@ -16,5 +17,14 @@ export const styles = StyleSheet.create({
     image: {
         flex: 1,
         borderRadius: 18,
+    },
+    returnContainer: {
+        position: 'absolute',
+        top: 20,
+        left: 20,
+    },
+    returnText: {
+        fontSize: 24,
+        color: colors.black
     }
 })
