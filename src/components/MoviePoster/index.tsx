@@ -6,6 +6,7 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 
 import { Movie } from '../../types/movieDB.type';
 import { RootStackParams } from '../../routes/Navigation';
+import { styles } from '../../styles/movieTheme';
 interface Props {
     movie: Movie,
     height?: number,
@@ -35,22 +36,3 @@ export const MoviePoster = ({ movie, width= 300, height=420, navigation: { navig
     </TouchableOpacity>
   )
 }
-
-const styles = StyleSheet.create({
-    imageContainer: {
-        shadowColor: "#000",
-        shadowOffset: {
-            width: 0,
-            height: 8,
-        },
-        shadowOpacity: 0.25,
-        shadowRadius: 8,
-
-        elevation: 8,
-        borderRadius: 18,
-    },
-    image: {
-        flex: 1,
-        borderRadius: 18,
-    }
-});
