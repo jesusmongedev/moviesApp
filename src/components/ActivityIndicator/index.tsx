@@ -3,12 +3,12 @@ import { View, ActivityIndicator, StyleSheet, ColorValue } from 'react-native';
 
 type Props = {
     Activitycolor?: ColorValue | undefined,
-    Activitysize?: number | "large" | undefined 
+    Activitysize?: number | "large" | undefined,
 }
 
 export const BasicActivityIndicator = ({ Activitycolor, Activitysize }: Props) => {
   return (
-    <View style={styles.container}>
+    <View style={{ ...styles.container}}>
       <ActivityIndicator
         color={Activitycolor}
         size={Activitysize}

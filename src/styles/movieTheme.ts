@@ -20,8 +20,8 @@ export const styles = StyleSheet.create({
     },
     returnContainer: {
         position: 'absolute',
-        top: 20,
-        left: 20,
+        top: 28,
+        left: 24,
     },
     returnText: {
         fontSize: 24,
