@@ -42,16 +42,21 @@ export const DetailScreen = ({ navigation: { pop }, route: { params } }: DetailP
             borderBottomRightRadius: 25
           }}
         />
+
+        {/* Back Button */}
         <TouchableOpacity
+          activeOpacity={0.6}
           style={styles.returnContainer}
           onPress={ () => pop()}
         >
           <Icon 
             name='arrow-back-ios'
-            size={38}
+            size={40}
             color='white'
+            style={{ textAlign: 'center', paddingLeft: 10 }}
           />
         </TouchableOpacity>
+        
       </View>
 
       <View style={detailStyles.container}>
@@ -66,12 +71,12 @@ export const DetailScreen = ({ navigation: { pop }, route: { params } }: DetailP
           <Text style={detailStyles.subTitle}> {release_date.toString()}</Text>
         </View>
 
+      </View>
 
-        { (isLoading) && <ActivityIndicator color='red' style={{ marginTop: screenHeight * 0.1 }} /> }
+        { (isLoading) && <ActivityIndicator color='red' style={{ marginTop: screenHeight * 0.055 }} /> }
 
         { (!isLoading) && <MovieDetails cast={cast} movieDetails={movieComplete!} /> }
 
-      </View>
 
     </ScrollView>
   )

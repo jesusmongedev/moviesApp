@@ -3,7 +3,8 @@ import { colors } from "../constants/colors";
 
 export const detailStyles = StyleSheet.create({
     container: {
-      margin: 18
+      marginTop: 14,
+      marginHorizontal: 14,
     },
     title: {
       fontSize: 20,

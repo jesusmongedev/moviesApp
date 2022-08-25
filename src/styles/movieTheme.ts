@@ -19,9 +19,14 @@ export const styles = StyleSheet.create({
         borderRadius: 18,
     },
     returnContainer: {
+        width: 55,
+        height: 55,
         position: 'absolute',
-        top: 28,
-        left: 24,
+        top: 30,
+        left: 14,
+        backgroundColor: 'rgba(0,0,0, 0.3)',
+        borderRadius: 50,
+        justifyContent: 'center',
     },
     returnText: {
         fontSize: 24,
