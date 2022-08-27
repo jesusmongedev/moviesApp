@@ -1,6 +1,8 @@
 import React from 'react';
 import {Image, StyleSheet, Text, View} from 'react-native';
+
 import { colors } from '../../constants/colors';
+import { URI } from '../../constants/uris';
 
 import { Cast } from '../../types/creditsInterface';
 
@@ -10,7 +12,7 @@ type Props = {
 
 export const CastCardDetails = ({ cast }: Props) => {
 
-    const uri = `https://image.tmdb.org/t/p/w500/${cast.profile_path}`  
+    const uri = `${URI.poster}/${cast.profile_path}`  
 
     return (
       <View style={styles.container}>

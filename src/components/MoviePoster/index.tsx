@@ -1,12 +1,14 @@
-import { Image, StyleSheet } from 'react-native';
 import React from 'react'
+import { Image } from 'react-native';
 
-import { StackNavigationProp, StackScreenProps } from '@react-navigation/stack';
+import { StackNavigationProp } from '@react-navigation/stack';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
 import { Movie } from '../../types/movieDB.type';
 import { RootStackParams } from '../../routes/Navigation';
+
 import { styles } from '../../styles/movieTheme';
+import { URI } from '../../constants/uris';
 interface Props {
     movie: Movie,
     height?: number,
@@ -16,7 +18,7 @@ interface Props {
 
 export const MoviePoster = ({ movie, width= 300, height=420, navigation: { navigate } }: Props) => {
     
-  const uri = `https://image.tmdb.org/t/p/w500/${movie?.poster_path}`  
+  const uri = `${URI.poster}/${movie?.poster_path}`  
 
   return (
     <TouchableOpacity 

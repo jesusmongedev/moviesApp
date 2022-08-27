@@ -1,14 +1,16 @@
-import { View, Image, Dimensions, TouchableOpacity, Text, ScrollView, StyleSheet, ActivityIndicator } from 'react-native';
+import { View, Image, Dimensions, TouchableOpacity, Text, ScrollView, ActivityIndicator } from 'react-native';
 import React from 'react'
 import { StackScreenProps } from '@react-navigation/stack';
 
 import Icon from 'react-native-vector-icons/MaterialIcons'
 
 import { RootStackParams } from '../routes/Navigation';
-import { styles } from '../styles/movieTheme';
 import { useMovieDetails } from '../hooks/useMovieDetails';
 import { MovieDetails } from '../components/MovieDetails/index';
+
+import { styles } from '../styles/movieTheme';
 import { detailStyles } from '../styles/movieDetailsTheme';
+import { URI } from '../constants/uris';
 
 const screenHeight = Dimensions.get('screen').height
 
@@ -22,7 +24,7 @@ export const DetailScreen = ({ navigation: { pop }, route: { params } }: DetailP
 
   console.log(cast[0]?.name)
   
-  const uri = `https://image.tmdb.org/t/p/w500/${poster_path}`  
+  const uri = `${URI.poster}/${poster_path}`  
 
   return (
     <ScrollView>
