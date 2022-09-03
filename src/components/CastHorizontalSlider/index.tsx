@@ -1,6 +1,5 @@
-import { useNavigation } from '@react-navigation/native';
 import React from 'react';
-import {FlatList, StyleSheet, Text, View} from 'react-native';
+import {FlatList, StyleSheet, View} from 'react-native';
 import { Cast } from '../../types/creditsInterface';
 import { CastCardDetails } from '../CastCardDetails/index';
 

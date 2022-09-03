@@ -7,14 +7,17 @@ export const getImageColors = async ( uri: string ) => {
     let secondary;
 
     switch (colors.platform) {
+
       case 'android':
         primary = colors.dominant;
-        secondary = colors.average  
+        secondary = colors.average;  
         break;
+
       case 'ios':
         primary = colors.primary;
-        secondary = colors.secondary
-        break;
+        secondary = colors.secondary;
+        break;        
+        
     }
 
     return [ primary, secondary ];

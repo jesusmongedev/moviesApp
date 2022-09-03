@@ -1,8 +1,9 @@
 import { View, Text, FlatList, StyleSheet } from 'react-native';
 import React from 'react'
+import { StackNavigationProp } from '@react-navigation/stack';
+
 import { MoviePoster } from '../MoviePoster/index';
 import { Movie } from '../../types/movieDB.type';
-import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParams } from '../../routes/Navigation';
 
 interface Props {

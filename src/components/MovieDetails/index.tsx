@@ -26,14 +26,22 @@ export const MovieDetails = ({ cast, movieDetails }: Props) => {
         <View style={styles.container}>
           <Icon name="star-border" size={20} color="gray" />
           <Text style={detailStyles.subTitle}> {vote_average}</Text>
-          <Text style={{...detailStyles.subTitle, marginLeft: 8}}>
+          <Text 
+            style={{...detailStyles.subTitle, marginLeft: 8, flex: 1}}
+            numberOfLines={1}
+            ellipsizeMode='tail'
+          >
             - {genres.map(g => g.name).join(', ')}
           </Text>
         </View>
 
         {/* Overview */}
-        <Text style={{...detailStyles.title, marginTop: 8}}>Overview</Text>
-        <Text style={detailStyles.text}>{overview}</Text>
+        { overview && (
+          <>
+            <Text style={{...detailStyles.title, marginTop: 8}}>Overview</Text>
+            <Text style={detailStyles.text}>{overview}</Text>
+          </>
+        )}
 
         {/* Budget */}
         <View style={{ ...styles.container, marginTop: 8 }}>
@@ -55,6 +63,6 @@ export const MovieDetails = ({ cast, movieDetails }: Props) => {
 
 const styles = StyleSheet.create({
   container: {
-    flexDirection: 'row', alignItems: 'center' 
+    flexDirection: 'row', alignItems: 'center'
   }
 });

@@ -17,14 +17,14 @@ export const RnAnimatedScreen = () => {
 
             <Button
                 title='Fade in'
-                onPress={ fadeIn }
+                onPress={ () => fadeIn() }
             />
 
             <Text/>
 
             <Button
                 title='Fade out'
-                onPress={ fadeOut }
+                onPress={ () => fadeOut() }
             />
 
 

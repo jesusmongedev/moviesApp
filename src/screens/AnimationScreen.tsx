@@ -12,8 +12,6 @@ import Animated, {
   FadeOut,
   Layout,
   RotateInDownLeft,
-  RotateInDownRight,
-  ZoomInRotate,
 } from 'react-native-reanimated';
 
 const LIST_ITEM_COLOR = '#1798DE';
